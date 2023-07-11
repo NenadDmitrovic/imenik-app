@@ -20,7 +20,7 @@ class Body extends React.Component {
     }
     render() {
     return (
-        <div id="app-container">
+        <div id="body">
         <ul>
           {this.state.items.map((item, index) => (
             <li key={index}>{item.name}: {item.number}</li>
