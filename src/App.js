@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Body from './components/body/Body';
+import Footer from './components/footer/Footer'
 
-function App() {
+class Item {
+  constructor(name, number) {
+    this.name = name;
+    this.number = number;
+  }
+};
+
+class App extends React.Component {
+
+  createItem(name, number) {
+  let item = new Item(name, number);
+  }
+  
+
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="app-container">
+      <Body></Body>
+      <Footer createItem={this.createItem}></Footer>
     </div>
   );
+  }
 }
 
 export default App;

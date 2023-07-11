@@ -1,0 +1,13 @@
+#app-body {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    font-size: 1.5rem;
+    overflow: visible;
+    height: 90%;
+}
+#ime {
+    padding-right: 15px;
+    color: darkgrey;
+    font-weight: bold;
+}
